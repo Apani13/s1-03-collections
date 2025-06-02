@@ -1,6 +1,6 @@
-package io.andreapan.level01.exercise1;
+package level01.exercise1;
 
-import io.andreapan.level01.exercise1.app.AppController;
+import level01.exercise1.app.AppController;
 
 public class Main {
 

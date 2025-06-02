@@ -1,6 +1,5 @@
-package io.andreapan.level01.exercise1.Model;
+package level01.exercise1.Model;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class Month {
@@ -8,6 +7,7 @@ public class Month {
     private final String name;
 
     public Month(String name) {
+
         if (name == null || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Month name cannot be null or empty");
         }

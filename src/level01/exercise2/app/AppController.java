@@ -1,10 +1,4 @@
-package io.andreapan.level01.exercise2.app;
-
-import io.andreapan.level01.exercise2.model.SecondListNumbers;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ListIterator;
+package level01.exercise2.app;
 
 public class AppController {
 

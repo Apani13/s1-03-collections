@@ -1,6 +1,6 @@
-package io.andreapan.level01.exercise1.app;
+package level01.exercise1.app;
 
-import io.andreapan.level01.exercise1.Model.Month;
+import level01.exercise1.Model.Month;
 
 import java.util.HashSet;
 

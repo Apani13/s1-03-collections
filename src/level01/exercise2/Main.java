@@ -1,9 +1,6 @@
-package io.andreapan.level01.exercise2;
+package level01.exercise2;
 
-import io.andreapan.level01.exercise2.app.AppController;
-
-import java.util.ArrayList;
-import java.util.List;
+import level01.exercise2.app.AppController;
 
 public class Main {
 

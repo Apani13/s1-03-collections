@@ -1,4 +1,4 @@
-package io.andreapan.level01.exercise2.model;
+package level01.exercise2.model;
 
 import java.util.ArrayList;
 import java.util.List;

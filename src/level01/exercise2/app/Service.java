@@ -1,7 +1,7 @@
-package io.andreapan.level01.exercise2.app;
+package level01.exercise2.app;
 
-import io.andreapan.level01.exercise2.model.FirstListNumbers;
-import io.andreapan.level01.exercise2.model.SecondListNumbers;
+import level01.exercise2.model.FirstListNumbers;
+import level01.exercise2.model.SecondListNumbers;
 import java.util.List;
 import java.util.ListIterator;
 
