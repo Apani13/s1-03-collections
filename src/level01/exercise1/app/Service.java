@@ -34,10 +34,12 @@ public class Service {
         months.add(new Month("November"));
         months.add(new Month("December"));
 
+    }
+
+    public void createAndAddAugust() {
         Month august = new Month("August");
 
         months.add(7, august);
-
     }
 
 
@@ -50,7 +52,7 @@ public class Service {
 
     }
 
-    public String listArray() {
+    public String listArrayWithDuplicateMonths() {
         StringBuilder message = new StringBuilder();
         for (Month month : months) {
             message.append(month.getName()).append("\n");
@@ -58,14 +60,13 @@ public class Service {
         return message.toString();
     }
 
-    public String listHashSet(HashSet<Month> monthHashSet) {
+    public String listHashSetWithoutDuplicateMonths(HashSet<Month> monthHashSet) {
         StringBuilder message = new StringBuilder();
         for (Month month : monthHashSet) {
             message.append(month.getName()).append("\n");
         }
         return message.toString();
     }
-
 
 
 

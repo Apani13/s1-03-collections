@@ -12,18 +12,26 @@ public class AppController {
         StringBuilder message = new StringBuilder();
 
         service.createAndAddMonths();
+
+        message.append("ARRAYLIST WITHOUT AUGUST\n")
+                        .append(service.getMonths());
+
+        service.createAndAddAugust();
+
+        message.append("ARRAYLIST WITH AUGUST CORRECTLY PLACED\n")
+                        .append(service.getMonths());
+
         service.addDuplicatesToArray();
 
-
         message.append("ARRAYLIST WITH DUPLICATES\n")
-                .append(service.listArray()).append("\n");
+                .append(service.listArrayWithDuplicateMonths()).append("\n");
 
 
         HashSet<Month> monthHashSet = new HashSet<>(service.getMonths());
 
 
         message.append("HASHSET WITHOUT DUPLICATES\n")
-                .append(service.listHashSet(monthHashSet)).append("\n");
+                .append(service.listHashSetWithoutDuplicateMonths(monthHashSet)).append("\n");
 
         message.append("HASHSET LISTED WITH ITERATOR\n")
                 .append(service.listHashSetIterator(monthHashSet)).append("\n");

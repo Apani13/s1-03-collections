@@ -22,14 +22,6 @@ public class Restaurant {
         return this.score;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setScore(int score) {
-        this.score = score;
-    }
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;

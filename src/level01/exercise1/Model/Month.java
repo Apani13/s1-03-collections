@@ -33,7 +33,7 @@ public class Month {
 
     @Override
     public String toString() {
-        return this.name;
+        return this.name + "\n";
     }
 
 
