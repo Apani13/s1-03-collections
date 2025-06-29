@@ -8,10 +8,10 @@ public class RestaurantController {
         StringBuilder message = new StringBuilder();
 
 
-        restaurantService.createObjectsAndPopulateHashSet();
+        restaurantService.createObjectsAndPopulateSet();
 
         return message.append("--- HASHSET WITHOUT DUPLICATES ---\n")
-                .append(restaurantService.listHashSet());
+                .append(restaurantService.getRestaurants());
 
     }
 }

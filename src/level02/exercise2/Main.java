@@ -1,6 +1,5 @@
 package level02.exercise2;
 
-import level02.exercise1.app.RestaurantController;
 import level02.exercise2.app.Controller;
 
 public class Main {
@@ -12,7 +11,7 @@ public class Main {
 
         message = controller.run();
 
-        System.out.println(message.toString());
+        System.out.println(message);
 
     }
 

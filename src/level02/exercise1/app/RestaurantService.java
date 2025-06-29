@@ -1,42 +1,32 @@
 package level02.exercise1.app;
 
-import level01.exercise1.Model.Month;
 import level02.exercise1.model.Restaurant;
+import level02.exercise2.model.RestaurantComparator;
 
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Collections;
+import java.util.NavigableSet;
+import java.util.TreeSet;
 
 public class RestaurantService {
 
-    private HashSet<Restaurant> restaurantHashSet;
+    private final NavigableSet<Restaurant> restaurants;
 
     public RestaurantService() {
-        this.restaurantHashSet = new HashSet<>();;
+        this.restaurants = new TreeSet<>(new RestaurantComparator());
     }
 
 
-    public HashSet<Restaurant> getRestaurantHashSet() {
-        return this.restaurantHashSet;
-    }
-
-    public void createObjectsAndPopulateHashSet() {
-        restaurantHashSet.add(new Restaurant("Pomodoro", 10));
-        restaurantHashSet.add(new Restaurant("IndianSushi", 4));
-        restaurantHashSet.add(new Restaurant("NoodleSopa", 7));
-        restaurantHashSet.add(new Restaurant("Pomodoro", 10));
-        restaurantHashSet.add(new Restaurant("IndianSushi", 6));
+    public NavigableSet<Restaurant> getRestaurants() {
+        return Collections.unmodifiableNavigableSet(restaurants);
     }
 
 
-    public String listHashSet() {
-
-        StringBuilder message = new StringBuilder();
-
-        for (Restaurant restaurant : restaurantHashSet) {
-            message.append(restaurant.getName()).append("\n")
-                    .append(restaurant.getScore()).append("\n");
-        }
-        return message.toString();
+    public void createObjectsAndPopulateSet() {
+        restaurants.add(new Restaurant("Pomodoro", 10));
+        restaurants.add(new Restaurant("IndianSushi", 4));
+        restaurants.add(new Restaurant("NoodleSopa", 7));
+        restaurants.add(new Restaurant("Pomodoro", 10));
+        restaurants.add(new Restaurant("IndianSushi", 6));
     }
 
 }

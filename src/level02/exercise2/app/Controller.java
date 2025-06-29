@@ -2,30 +2,27 @@ package level02.exercise2.app;
 
 import level02.exercise1.app.RestaurantService;
 import level02.exercise1.model.Restaurant;
-import level02.exercise2.model.RestaurantComparator;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class Controller {
 
     public static StringBuilder run() {
 
-        RestaurantService restaurantService = new RestaurantService();
-
-        restaurantService.createObjectsAndPopulateHashSet();
-
-        List<Restaurant> restaurants = new ArrayList<>(restaurantService.getRestaurantHashSet());
-
-        Collections.sort(restaurants, new RestaurantComparator());
-
+        RestaurantService service = new RestaurantService();
+        String NL = System.lineSeparator();
         StringBuilder message = new StringBuilder();
 
-        message.append("\nRESTAURANTS SORTED BY NAME AND SCORE:\n");
 
-        for (Restaurant r : restaurants){
-            message.append(r).append("\n");
+        message.append("CREATING OBJECTS AND POPULATING SET.....")
+                .append(NL);
+        service.createObjectsAndPopulateSet();
+
+
+
+        message.append("RESTAURANTS SORTED BY NAME AND SCORE:")
+                .append(NL);
+
+        for (Restaurant r : service.getRestaurants()){
+            message.append(r).append(NL);
         }
 
         return message;
