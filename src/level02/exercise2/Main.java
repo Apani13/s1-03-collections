@@ -1,13 +1,13 @@
 package level02.exercise2;
 
-import level02.exercise2.app.Controller;
+import level02.exercise2.app.ComparatorController;
 
 public class Main {
 
     public static void main(String[] args) {
 
         StringBuilder message;
-        Controller controller = new Controller();
+        ComparatorController controller = new ComparatorController();
 
         message = controller.run();
 
